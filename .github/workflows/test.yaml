@@ -21,9 +21,14 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v2.3.0
+      - name: yarn install
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
+      - name: install chromium-browser
+        run: |
+          sudo install chromium-browser
+      - name: test:ci
+        uses: borales/actions-yarn@v2.3.0
         with:
           cmd: test:ci # will run `yarn test` command
