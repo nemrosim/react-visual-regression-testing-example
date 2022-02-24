@@ -18,7 +18,8 @@
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "chromatic": "npx chromatic"
     },
     "devDependencies": {
         "@storybook/addon-actions": "^6.4.19",
