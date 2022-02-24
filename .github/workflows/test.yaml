@@ -25,11 +25,7 @@ jobs:
         uses: borales/actions-yarn@v2.3.0
         with:
           cmd: install # will run `yarn install` command
-      - name: install chromium-browser
-        run: sudo apt-get install chromium-browser
-      - name: get package destination
-        run: dpkg -L chromium-browser
       - name: test:ci
         uses: borales/actions-yarn@v2.3.0
         with:
-          cmd: test:ci # will run `yarn test` command
+          cmd: test:ci:no-visual # will run `yarn test` command

@@ -13,8 +13,8 @@
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
-        "test": "react-scripts test",
-        "test:ci": "CI=true react-scripts test --detectOpenHandles",
+        "test:with-visual": "react-scripts test --runInBand",
+        "test:ci:no-visual": "CI=true react-scripts test --modulePathIgnorePatterns=tests:visual",
         "eject": "react-scripts eject",
         "storybook": "start-storybook -p 6006 -s public",
         "build-storybook": "build-storybook -s public",
