@@ -31,10 +31,11 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          # 👇 Option to prevent the workflow from failing
+          # 👇 Option to prevent the workflow from failing.
+          # Positive exit of action even when there are changes: boolean or branchname
           exitZeroOnChanges: true
           exitOnceUploaded: true
-          workingDir: ./scr
+          workingDir: ./src
       - name: Run tests
         uses: borales/actions-yarn@v2.3.0
         with:
