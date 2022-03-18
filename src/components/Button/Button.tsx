@@ -8,7 +8,7 @@ export const hovered = css`
 
 export const StyledButton = styled.button<ButtonProps>`
     background-color: initial;
-    background-image: linear-gradient(-180deg, #fcd602, #00bd68);
+    background-image: linear-gradient(-180deg, #53cb1b, #00bd68);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
     color: #000000;
