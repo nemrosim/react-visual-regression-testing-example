@@ -4,9 +4,10 @@ name: 'Tests'
 # Event for the workflow
 on:
   push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master
+      - 'fix/**'
+      - 'feat/**'
 
 # List of jobs
 jobs:
