@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { generateImage, setDefaultOptions } from 'jsdom-screenshot';
+import { generateImage } from 'jsdom-screenshot';
 import { Button, hovered } from '../Button';
 import styled from 'styled-components';
 import userEvent from '@testing-library/user-event';
@@ -17,7 +17,7 @@ describe.each([
         width: 200,
         height: 60,
     },
-])('should render Button component for %s', ({ width, height }) => {
+])('%s', ({ width, height }) => {
     it('default state', async () => {
         render(<Button />);
 
